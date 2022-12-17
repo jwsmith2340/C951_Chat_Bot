@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>Hmm, I'm not sure what you mean? Try saying Hi, or Start!</template>
+  </category>
+  
+  <category>
+    <pattern>HI</pattern>
+    <template>Hello! If you'd like to get started, say "start".</template>
+  </category>
+  
+  <category>
+    <pattern>START</pattern>
+    <template>First off, what is your name? Say, "My name is..."</template>
+  </category>
+  
+  <category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+        Well it is nice to meet you <formal><set name="username"><star /></set></formal>!
+        Would you like some career advice?
+        
+        <button>
+            <text>Yes</text>
+            <postback>CS QUESTION</postback>
+        </button>
+    
+        <button>
+            <text>No</text>
+            <postback>NO</postback>
+        </button>
+        
+    </template>
+    
+  </category>
+  
+  <category>
+      <pattern>NO</pattern>
+      <template>Well, if you change your mind, just say "Hi" to get started!</template>
+  </category>
+  
+  <category>
+      <pattern>CS QUESTION</pattern>
+      <template>
+          
+        Wonderful! What is your major?
+        <button>
+            <text>CS Major</text>
+            <postback>CS MAJOR</postback>
+        </button>
+
+        <button>
+            <text>Other</text>
+            <postback>OTHER MAJOR</postback>
+        </button>
+        
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CS MAJOR</pattern>
+      <template>
+          
+          Wonderful! I can definitely help! Now, what area of CS interests you?
+          
+            <button>
+                <text>Security</text>
+                <postback>CYBERSECURITY</postback>
+            </button>
+            
+            <button>
+                <text>Design</text>
+                <postback>UIUX</postback>
+            </button>
+            
+            <button>
+                <text>Data</text>
+                <postback>DATA</postback>
+            </button>
+          
+      </template>
+  </category>
+  
+   <category>
+      <pattern>OTHER MAJOR</pattern>
+      <template>Sorry! This tool is intended for CS Majors! If you switch your 
+      major, come back and say "Hi" to get started!</template>
+  </category>
+  
+  <category>
+      <pattern>CYBERSECURITY</pattern>
+      <template>
+          Have you considered becoming a Security Analyst? Check this out!
+          <link>
+              <text>Click Here</text>
+              <url>https://www.cybersecurityeducation.org/careers/security-analyst/</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>UIUX</pattern>
+      <template>
+          So you enjoy design? That's great! There are a few different choices in design.
+          Are you more interested in UI/UX, or in Frontend Web Development?
+          
+          <button>
+                <text>UI/UX</text>
+                <postback>UIUX CAREER</postback>
+            </button>
+            
+            <button>
+                <text>Frontend Web Dev</text>
+                <postback>FE WEB</postback>
+            </button>
+          
+      </template>
+  </category>
+  
+  <category>
+      <pattern>UIUX CAREER</pattern>
+      <template>
+          UI/UX is a wonderful career path! I found a resource that may be helpful!
+          <link>
+              <text>Click Here</text>
+              <url>https://resources.workable.com/ui-ux-designer-job-description</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>FE WEB</pattern>
+      <template>
+          A frontend web developer certainly built this site, it's a great choice!
+          Here is some more information to help you in making a decision:
+          <link>
+              <text>Click Here</text>
+              <url>https://www.roberthalf.com/blog/salaries-and-skills/hot-job-front-end-web-developer</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DATA</pattern>
+      <template>
+          Roughly 90% of the world's data was created in the last 2 years alone! It is an interesting
+          field to get into, but what kind of data focused job appeals to you the most?
+          
+          <button>
+                <text>Data Scientist</text>
+                <postback>DSCIENTIST</postback>
+            </button>
+            
+            <button>
+                <text>Data Analyst</text>
+                <postback>DANALYST</postback>
+            </button>
+          
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DSCIENTIST</pattern>
+      <template>
+          Data science is a growing field with a ton of opportunities! I found a great resource
+          to help you learn more about this field:
+          <link>
+              <text>Click Here</text>
+              <url>https://www.bls.gov/ooh/math/data-scientists.htm</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DANALYST</pattern>
+      <template>
+          All that data created in the last 2 years, who is going to analyze it? A data analyst!
+          I found a great resource for you to check out: 
+          <link>
+              <text>Click Here</text>
+              <url>https://www.simplilearn.com/data-analyst-job-description-article</url>
+          </link>
+      </template>
+  </category>
+  
+</aiml>
